@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.presetGoals.presetPersonalForms.BusinessForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:text="New Preset Business Goal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#322C6C"
+            android:textSize="25sp" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TextView
+                    android:id="@+id/goalTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Business Goal."
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="How much would you like to save?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="10dp"
+                    app:boxStrokeColor="#23BBFA"
+                    app:hintTextColor="#23BBFA">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/goalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Amount in KES."
+                        android:inputType="textPersonName"
+                        android:textColorHint="#B5E7FC" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="When do you plan to achieve your goal?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSelectDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="dd/mm/yyyy" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnShowDatePicker"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Date"
+                        android:textColor="#23BBFA"
+                        app:strokeColor="#23BBFA" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="How would you like to be saving to this goal? "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/newPersonalGoalRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/radio_button_1">
+
+                    <RadioButton
+                        android:id="@+id/daily"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Daily" />
+
+                    <RadioButton
+                        android:id="@+id/Weekly"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Weekly" />
+
+                    <RadioButton
+                        android:id="@+id/Monthly"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Monthly" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="How long would you like lock this goal? "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get 8% interest on normal savings and 10% for locked savings"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/newPersonalGoalLockRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/radio_button_1">
+
+                    <RadioButton
+                        android:id="@+id/threeMonths"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3 months" />
+
+                    <RadioButton
+                        android:id="@+id/sixMonths"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="6 months" />
+
+                    <RadioButton
+                        android:id="@+id/nineMonths"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="9 months" />
+
+                    <RadioButton
+                        android:id="@+id/tweleveMonths"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="12 months" />
+
+                    <RadioButton
+                        android:id="@+id/doNotLock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="I don't want to lock this goal" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="How much would you like to borrow at the end of your goal?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="10dp"
+                    app:boxStrokeColor="#23BBFA"
+                    app:hintTextColor="#23BBFA">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/borrowAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Amount in KES."
+                        android:inputType="textPersonName"
+                        android:textColorHint="#B5E7FC" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSave"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="130dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:text="Set Goal"
+                    android:textColor="#23BBFA"
+                    app:cornerRadius="10dp"
+                    app:strokeColor="#23BBFA" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSaveContinueLater"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Save &amp; Continue Later"
+                    android:textAlignment="center"
+                    android:textColor="#23BBFA" />
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

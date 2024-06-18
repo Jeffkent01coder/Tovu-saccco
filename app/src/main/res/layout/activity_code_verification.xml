@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="35dp"
+    tools:context=".ui.kyc.CodeVerification">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A code has been sent to +254-748-830-801 or demo@gmail.com"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:boxStrokeColor="#23BBFA"
+        app:hintTextColor="#23BBFA">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP code here"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColorHint="#B5E7FC" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the second code here"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:boxStrokeColor="#23BBFA"
+        app:hintTextColor="#23BBFA">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter  code here"
+            android:maxLength="4"
+            android:inputType="number"
+            android:textColorHint="#B5E7FC" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="By continuing, I confirm I have read the Privacy Policy and agree to the Terms &amp; Conditions of Tovu Sacco in the country where I use the service"
+        android:textColor="#23BBFA" />
+
+    <CheckBox
+        android:id="@+id/terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="I agree to Terms and Conditions" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        style="@style/Widget.Material3.Button.IconButton.Outlined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:borderWidth="1dp"
+        app:icon="@drawable/baseline_arrow_forward_ios_24"
+        app:iconTint="#23BBFA"
+        app:strokeColor="#23BBFA" />
+
+
+</LinearLayout>

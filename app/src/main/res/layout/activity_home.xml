@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Home">
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Side menu button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sideMenu"
+            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:borderWidth="1dp"
+            app:icon="@drawable/baseline_menu_24"
+            app:iconTint="#23BBFA"
+            app:strokeColor="#23BBFA" />
+
+        <!-- Other buttons and views -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveNow"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save Now"
+                app:icon="@drawable/baseline_add_24"
+                app:iconTint="#23BBFA"
+                app:strokeColor="#23BBFA" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCommunity"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Community"
+                app:icon="@drawable/baseline_stars_24"
+                app:iconTint="#23BBFA"
+                app:strokeColor="#23BBFA" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnJoinSacco"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Join Tovu Sacco"
+                app:icon="@drawable/baseline_add_24"
+                app:iconTint="#23BBFA"
+                app:strokeColor="#23BBFA" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPersonalGoals"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Personal Goals"
+                app:icon="@drawable/baseline_add_24"
+                app:iconTint="#23BBFA"
+                app:strokeColor="#23BBFA" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGroupGoals"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Group Goals"
+                app:icon="@drawable/baseline_add_24"
+                app:iconTint="#23BBFA"
+                app:strokeColor="#23BBFA" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAccessCredits"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Access Credits"
+                app:icon="@drawable/baseline_add_24"
+                app:iconTint="#23BBFA"
+                app:strokeColor="#23BBFA" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:padding="10dp"
+                    android:text="Personal Goals"
+                    android:textColor="#322C6C"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/baseline_add_24" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/personalGoalsRecyclerView"
+                    android:layout_height="250dp"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_dash_personal"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:padding="10dp"
+                    android:text="Group Goals"
+                    android:textColor="#322C6C"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/baseline_add_24" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/groupGoalsRecyclerView"
+                    android:layout_height="250dp"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_dash_personal"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/baseline_add_24"
+                    android:drawablePadding="15dp"
+                    android:padding="10dp"
+                    android:text="Preset Goals"
+                    android:textColor="#322C6C"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPresetGoals"
+                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preset Goals"
+                    app:icon="@drawable/baseline_add_24"
+                    app:iconTint="#23BBFA"
+                    app:strokeColor="#23BBFA" />
+
+            </TableLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Navigation view -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/navigation_drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

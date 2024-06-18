@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TovuSacco"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.Home"
+            android:exported="false" />
+        <activity
+            android:name=".ui.goals.groupgoals.GroupGoals"
+            android:exported="false" />
+        <activity
+            android:name=".ui.goals.groupgoals.GroupGoalsDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.goals.groupgoals.NewGroupGoal"
+            android:exported="false" />
+        <activity
+            android:name=".ui.goals.personalGoals.PersonalGoalsDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.goals.personalGoals.PersonalGoals"
+            android:exported="false" />
+        <activity
+            android:name=".ui.goals.personalGoals.NewPersonalGoal"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loanForms.LogBookForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loanForms.LoanRegistrationForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loanForms.LandPurchaseForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loanForms.CarLoanForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loanForms.BusinessWorkingCapitalForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loan.Loan"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loan.BorrowAmount"
+            android:exported="false" />
+        <activity
+            android:name=".ui.presetGoals.presetPersonalForms.SchoolFeesForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.presetGoals.presetPersonalForms.PresetLandPurchaseForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.presetGoals.presetPersonalForms.NewCarForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.presetGoals.presetPersonalForms.HouseRentForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.presetGoals.presetPersonalForms.BusinessForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.presetGoals.PresetGoals"
+            android:exported="false" />
+        <activity
+            android:name=".ui.withdrawal.Withdraw"
+            android:exported="false" />
+        <activity
+            android:name=".ui.saving.SaveNow"
+            android:exported="false" />
+        <activity
+            android:name=".ui.community.CommunityLeaderBoard"
+            android:exported="false" />
+        <activity
+            android:name=".ui.kyc.CodeVerification"
+            android:exported="false" />
+        <activity
+            android:name=".ui.kyc.KYC5"
+            android:exported="false" />
+        <activity
+            android:name=".ui.kyc.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".ui.kyc.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

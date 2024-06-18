@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.withdrawal.Withdraw">
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/tovusacco" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:text="How much would you like to withdraw?"
+        android:textAlignment="center"
+        android:textColor="#8DB9C6" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="20dp"
+        app:boxStrokeColor="#23BBFA"
+        app:hintTextColor="#23BBFA">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/withdrawalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Withdrawal Amount"
+            android:inputType="number"
+            android:textColorHint="#B5E7FC" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Funds withdrawn will reflect in your account \n within 48 hrs excluding weekends and \n public holidays"
+        android:textAlignment="center"
+        android:textColor="#322C6C" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonContinue"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="130dp"
+        android:layout_marginTop="30dp"
+        android:text="Continue"
+        android:textColor="#23BBFA"
+        app:cornerRadius="10dp"
+        app:strokeColor="#23BBFA" />
+
+</LinearLayout>
